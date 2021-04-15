@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{b0058df0-954b-4d71-a993-a6cc7c271d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cannon">
+      <UniqueIdentifier>{4b602fdb-3e7e-49f5-b945-e651da0dfc62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cannon\Shaders">
+      <UniqueIdentifier>{158042e9-4ae4-4f67-9452-3099d96b467f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Media">
+      <UniqueIdentifier>{a6539251-fc78-45f4-b5a6-7d9bfbbcab9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppMain.cpp" />
+    <ClCompile Include="AppView.cpp" />
+    <ClCompile Include="RMCameraReader.cpp" />
+    <ClCompile Include="SensorScenario.cpp" />
+    <ClCompile Include="VideoFrameProcessor.cpp" />
+    <ClCompile Include="SensorStreamServer.cpp" />
+    <ClCompile Include="TimeConverter.cpp" />
+    <ClCompile Include="SpatialMapper.cpp" />
+    <ClCompile Include="Cannon\AnimatedVector.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon\DrawCall.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon\FloatingSlate.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon\FloatingText.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon\MixedReality.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon\RecordedValue.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannon\TrackedHands.cpp">
+      <Filter>Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="MrcVideoEffectDefinition.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppMain.h" />
+    <ClInclude Include="RMCameraReader.h" />
+    <ClInclude Include="SensorScenario.h" />
+    <ClInclude Include="VideoFrameProcessor.h" />
+    <ClInclude Include="SensorStreamServer.h" />
+    <ClInclude Include="TimeConverter.h" />
+    <ClInclude Include="SpatialMapper.h" />
+    <ClInclude Include="MrcVideoEffectDefinition.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Media\Textures\coord_axes.png">
+      <Filter>Media</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Cannon\Shaders\Lit_PS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Cannon\Shaders\Lit_VS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Cannon\Shaders\Lit_VS_SPS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Cannon\Shaders\LitTextureColorBlend_PS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Cannon\Shaders\Unlit_VS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Cannon\Shaders\Unlit_VS_SPS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Cannon\Shaders\UnlitTexture_PS.hlsl">
+      <Filter>Cannon\Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="$(MSBuildThisFileDirectory)\..\Public\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Media\Meshes\coord_axes.obj">
+      <Filter>Media</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
