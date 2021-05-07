@@ -170,7 +170,7 @@ void TrackedHands::UpdateFromMixedReality(MixedReality& mixedReality)
 	{
 		const auto pHandData = mixedReality.GetHand(handIndex);
 
-		if (pHandData)
+		if (pHandData && !pHandData->handJoints.empty())
 		{
 			m_handTrackedStates[handIndex] = true;
 

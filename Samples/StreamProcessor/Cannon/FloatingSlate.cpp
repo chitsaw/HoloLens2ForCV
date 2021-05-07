@@ -34,6 +34,7 @@ FloatingSlateButton::FloatingSlateButton(const XMVECTOR& position, const XMVECTO
 	m_id(id),
 	m_buttonShape(Mesh::MT_ROUNDEDBOX),
 	m_fontSize(m_defaultFontSize),
+	m_textColor(TextColor::White),
 	m_drawCall("Lit_VS.cso", "LitTextureColorBlend_PS.cso", Mesh::MT_EMPTY),
 	m_outlineDrawCall("Lit_VS.cso", "Lit_PS.cso", Mesh::MT_EMPTY),
 	m_texture(texture),
@@ -323,7 +324,7 @@ void FloatingSlateButton::UpdateTexture()
 
 		D2D_RECT_F layoutRect{ 0.0f, 0.0f, (float)m_texture->GetWidth(), (float)m_texture->GetHeight() };
 
-		TextColor textColor = !m_disabled ? TextColor::White : TextColor::Gray;
+		TextColor textColor = !m_disabled ? m_textColor : TextColor::Gray;
 		DrawCall::DrawText(m_buttonText, layoutRect, m_fontSize, HorizontalAlignment::Center, VerticalAlignment::Middle, textColor);
 		
 		DrawCall::PopRenderPass();
@@ -384,6 +385,11 @@ void FloatingSlateButton::SetFontSize(const float fontSize)
 {
 	m_fontSize = fontSize;
 	m_textureNeedsUpdate = true;
+}
+
+void FloatingSlateButton::SetTextColor(const TextColor textColor)
+{
+	m_textColor = textColor;
 }
 
 bool FloatingSlateButton::IsDisabled()

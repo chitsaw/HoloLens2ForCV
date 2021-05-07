@@ -68,6 +68,7 @@ public:
 
 	void SetText(const std::string& buttonText);
 	void SetFontSize(const float fontSize);			// Default size is 36. Buttons textures are rendered at 96*2DPI
+	void SetTextColor(const TextColor textColor);
 
 	XMVECTOR GetColor();
 	void SetColor(const XMVECTOR& color);
@@ -105,6 +106,7 @@ private:
 	bool m_textureNeedsUpdate;
 	std::string m_buttonText;
 	float m_fontSize;
+	TextColor m_textColor;
 
 	XMVECTOR m_position;			// Starting position of the button when in the un-pushed state
 	XMVECTOR m_size;				// Size of the button (baked into the mesh)

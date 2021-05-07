@@ -23,8 +23,12 @@ FloatingText::FloatingText() :
 
 void FloatingText::SetText(const std::string& text)
 {
-	m_text = text;
-	m_textureNeedsUpdate = true;
+	// Avoid unnecessary updates if text has not changed
+	if (text != m_text)
+	{
+		m_text = text;
+		m_textureNeedsUpdate = true;
+	}
 }
 
 void FloatingText::SetFontSize(const float fontSize)
