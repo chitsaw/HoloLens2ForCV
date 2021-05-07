@@ -21,19 +21,19 @@
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
     <ClCompile Include="AppView.cpp" />
-    <ClCompile Include="Cannon\MixedReality.cpp">
+    <ClCompile Include="..\Cannon\MixedReality.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
-    <ClCompile Include="Cannon\FloatingSlate.cpp">
+    <ClCompile Include="..\Cannon\FloatingSlate.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
-    <ClCompile Include="Cannon\AnimatedVector.cpp">
+    <ClCompile Include="..\Cannon\AnimatedVector.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
-    <ClCompile Include="Cannon\RecordedValue.cpp">
+    <ClCompile Include="..\Cannon\RecordedValue.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
-    <ClCompile Include="Cannon\FloatingText.cpp">
+    <ClCompile Include="..\Cannon\FloatingText.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
     <ClCompile Include="RMCameraReader.cpp" />
@@ -48,10 +48,10 @@
     <ClCompile Include="TimeConverter.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="Cannon\TrackedHands.cpp">
+    <ClCompile Include="..\Cannon\TrackedHands.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
-    <ClCompile Include="Cannon\DrawCall.cpp">
+    <ClCompile Include="..\Cannon\DrawCall.cpp">
       <Filter>Cannon</Filter>
     </ClCompile>
     <ClCompile Include="HeTHaTEyeStream.cpp" />
@@ -102,25 +102,25 @@
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Cannon\Shaders\Lit_PS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Lit_PS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Lit_VS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Lit_VS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Lit_VS_SPS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Lit_VS_SPS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\LitTextureColorBlend_PS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\LitTextureColorBlend_PS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Unlit_VS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Unlit_VS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\UnlitTexture_PS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\UnlitTexture_PS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Unlit_VS_SPS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Unlit_VS_SPS.hlsl">
       <Filter>Cannon\Shaders</Filter>
     </FxCompile>
   </ItemGroup>

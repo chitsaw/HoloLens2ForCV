@@ -189,15 +189,15 @@
     <Image Include="Media\Textures\coord_axes.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cannon\AnimatedVector.cpp" />
-    <ClCompile Include="Cannon\DrawCall.cpp" />
-    <ClCompile Include="Cannon\FloatingSlate.cpp" />
-    <ClCompile Include="Cannon\FloatingText.cpp" />
-    <ClCompile Include="Cannon\MixedReality.cpp" />
-    <ClCompile Include="Cannon\RecordedValue.cpp" />
+    <ClCompile Include="..\Cannon\AnimatedVector.cpp" />
+    <ClCompile Include="..\Cannon\DrawCall.cpp" />
+    <ClCompile Include="..\Cannon\FloatingSlate.cpp" />
+    <ClCompile Include="..\Cannon\FloatingText.cpp" />
+    <ClCompile Include="..\Cannon\MixedReality.cpp" />
+    <ClCompile Include="..\Cannon\RecordedValue.cpp" />
+    <ClCompile Include="..\Cannon\TrackedHands.cpp" />
     <ClCompile Include="AppMain.cpp" />
     <ClCompile Include="AppView.cpp" />
-    <ClCompile Include="Cannon\TrackedHands.cpp" />
     <ClCompile Include="HeTHaTEyeStream.cpp" />
     <ClCompile Include="StringHelpers.cpp" />
     <ClCompile Include="Tar.cpp" />
@@ -207,7 +207,7 @@
     <ClCompile Include="SensorScenario.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Cannon\Shaders\LitTextureColorBlend_PS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\LitTextureColorBlend_PS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
@@ -221,7 +221,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Lit_PS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Lit_PS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
@@ -235,7 +235,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Lit_VS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Lit_VS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
@@ -249,7 +249,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Lit_VS_SPS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Lit_VS_SPS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
@@ -263,7 +263,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\UnlitTexture_PS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\UnlitTexture_PS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
@@ -277,7 +277,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Unlit_VS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Unlit_VS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
@@ -291,7 +291,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Cannon\Shaders\Unlit_VS_SPS.hlsl">
+    <FxCompile Include="..\Cannon\Shaders\Unlit_VS_SPS.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>

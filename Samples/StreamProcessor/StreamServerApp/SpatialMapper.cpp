@@ -13,7 +13,7 @@
 
 
 #include "SpatialMapper.h"
-#include "Cannon/Common/Timer.h"
+#include "../Cannon/Common/Timer.h"
 
 #include <winrt/Windows.Foundation.Collections.h>
 #include <robuffer.h>
