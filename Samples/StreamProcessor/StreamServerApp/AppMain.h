@@ -21,7 +21,6 @@
 #include "../Cannon/TrackedHands.h"
 
 #include "SensorScenario.h"
-#include "SpatialMapper.h"
 #include "VideoFrameProcessor.h"
 
 class AppMain : public IFloatingSlateButtonCallback
@@ -52,9 +51,7 @@ private:
 
 	FloatingSlate m_menu;
 	FloatingText m_debugText;
-	FloatingSlate m_poster;
 	std::vector<std::unique_ptr<FloatingSlate>> m_objectLabels;
-	size_t m_posterAnchor = 0;
 	std::string m_debugString;
 	std::vector<std::tuple<std::string, XMMATRIX>> m_labelData;
 	std::mutex m_debugStringMutex;
@@ -75,7 +72,6 @@ private:
 	std::unique_ptr<SensorStreamServer> m_headPoseServer;
 	std::unique_ptr<SensorStreamServer> m_debugTextReceiver;
 	std::unique_ptr<SensorStreamServer> m_objectLabelsReceiver;
-	std::unique_ptr<SpatialMapper> m_spatialMapper;
 	long long m_lastPositionTimestamp = 0;
 	long long m_lastSpatialMapTimestamp = 0;
 };

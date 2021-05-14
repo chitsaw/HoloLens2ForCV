@@ -12,8 +12,8 @@
 #pragma once
 
 #include "researchmode\ResearchModeApi.h"
-#include "Tar.h"
-#include "TimeConverter.h"
+#include "..\Utils\Tar.h"
+#include "..\Utils\TimeConverter.h"
 
 #include <mutex>
 #include <winrt/Windows.Perception.Spatial.h>

@@ -15,7 +15,7 @@
 
 #include "researchmode\ResearchModeApi.h"
 #include "SensorStreamServer.h"
-#include "TimeConverter.h"
+#include "..\Utils\TimeConverter.h"
 
 #include <mutex>
 #include <winrt/Windows.Perception.Spatial.h>

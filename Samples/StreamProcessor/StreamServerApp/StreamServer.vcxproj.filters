@@ -13,6 +13,9 @@
     <Filter Include="Media">
       <UniqueIdentifier>{a6539251-fc78-45f4-b5a6-7d9bfbbcab9a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{a1d699ff-26c9-4e52-8882-d59ed2c7c412}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
@@ -21,8 +24,9 @@
     <ClCompile Include="SensorScenario.cpp" />
     <ClCompile Include="VideoFrameProcessor.cpp" />
     <ClCompile Include="SensorStreamServer.cpp" />
-    <ClCompile Include="TimeConverter.cpp" />
-    <ClCompile Include="SpatialMapper.cpp" />
+    <ClCompile Include="..\Utils\TimeConverter.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
     <ClCompile Include="MrcVideoEffectDefinition.cpp" />
     <ClCompile Include="..\Cannon\AnimatedVector.cpp">
       <Filter>Cannon</Filter>
@@ -52,8 +56,9 @@
     <ClInclude Include="SensorScenario.h" />
     <ClInclude Include="VideoFrameProcessor.h" />
     <ClInclude Include="SensorStreamServer.h" />
-    <ClInclude Include="TimeConverter.h" />
-    <ClInclude Include="SpatialMapper.h" />
+    <ClInclude Include="..\Utils\TimeConverter.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
     <ClInclude Include="MrcVideoEffectDefinition.h" />
   </ItemGroup>
   <ItemGroup>

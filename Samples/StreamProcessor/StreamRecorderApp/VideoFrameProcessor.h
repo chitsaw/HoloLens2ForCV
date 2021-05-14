@@ -16,8 +16,8 @@
 #include <winrt/Windows.Media.Capture.Frames.h>
 #include <winrt/Windows.Perception.Spatial.h>
 #include <winrt/Windows.Graphics.Imaging.h>
-#include "Tar.h"
-#include "TimeConverter.h"
+#include "..\Utils\Tar.h"
+#include "..\Utils\TimeConverter.h"
 #include <mutex>
 #include <shared_mutex>
 #include <thread>

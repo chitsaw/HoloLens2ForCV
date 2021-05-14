@@ -166,8 +166,7 @@
     <ClInclude Include="AppMain.h" />
     <ClInclude Include="MrcVideoEffectDefinition.h" />
     <ClInclude Include="SensorStreamServer.h" />
-    <ClInclude Include="SpatialMapper.h" />
-    <ClInclude Include="TimeConverter.h" />
+    <ClInclude Include="..\Utils\TimeConverter.h" />
     <ClInclude Include="VideoFrameProcessor.h" />
     <ClInclude Include="RMCameraReader.h" />
     <ClInclude Include="SensorScenario.h" />
@@ -199,8 +198,7 @@
     <ClCompile Include="AppView.cpp" />
     <ClCompile Include="MrcVideoEffectDefinition.cpp" />
     <ClCompile Include="SensorStreamServer.cpp" />
-    <ClCompile Include="SpatialMapper.cpp" />
-    <ClCompile Include="TimeConverter.cpp" />
+    <ClCompile Include="..\Utils\TimeConverter.cpp" />
     <ClCompile Include="VideoFrameProcessor.cpp" />
     <ClCompile Include="RMCameraReader.cpp" />
     <ClCompile Include="SensorScenario.cpp" />

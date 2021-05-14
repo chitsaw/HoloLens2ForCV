@@ -46,10 +46,6 @@ AppMain::AppMain() :
     m_mixedReality.EnableMixedReality();
     m_mixedReality.EnableEyeTracking();
 
-    //// Uncomment the following 2 lines (and the 1 line in DrawObjects()) to draw the surfaces
-    ////m_mixedReality.EnableSurfaceMapping();
-    ////m_mixedReality.GetSurfaceMappingInterface()->SetSurfaceDrawMode(SurfaceDrawMode::Mesh);
-
     const float rootMenuHeight = 0.03f;
     XMVECTOR mainButtonSize = XMVectorSet(0.04f, rootMenuHeight, 0.01f, 0.0f);
 
@@ -59,12 +55,6 @@ AppMain::AppMain() :
 
     m_menu.AddButton(make_shared<FloatingSlateButton>(XMVectorSet(-0.0225f, 0.0f, 0.0f, 1.0f), mainButtonSize, XMVectorSet(0.0f, 0.5f, 0.0f, 1.0f), (unsigned)ButtonID::Start, this, "Start"));
     m_menu.AddButton(make_shared<FloatingSlateButton>(XMVectorSet(0.0225f, 0.0f, 0.0f, 1.0f), mainButtonSize, XMVectorSet(0.5f, 0.0f, 0.0f, 1.0f), (unsigned)ButtonID::Stop, this, "Stop"));
-
-    // Using a Button within a FloatingSlate on which to render a bitmap
-    m_poster.SetSize(XMVectorSet(0.5f, 1.0f, 0.01f, 1.0f));
-    auto contentButton = make_shared<FloatingSlateButton>(XMVectorZero(), XMVectorSet(0.5f, 1.0f, 0.01f, 1.0f), XMVectorSet(1.0f, 1.0f, 1.0f, 1.0f), 0, this, make_shared<Texture2D>("coord_axes.png"));
-    contentButton->SetShape(Mesh::MT_BOX);
-    m_poster.AddButton(contentButton);
 
     // Initialize debug text size
     m_debugText.SetSize(XMVectorSet(0.40f, 0.60f, 1.0f, 1.0f));
@@ -82,7 +72,6 @@ AppMain::AppMain() :
     m_debugTextReceiver->ClientConnected([this] { m_pReceiverThread = new std::thread(&AppMain::ReceiverThreadFunction, this); });
     m_objectLabelsReceiver = make_unique<SensorStreamServer>();
     m_objectLabelsReceiver->ClientConnected([this] { m_pLabelsReceiverThread = new std::thread(&AppMain::ReceiveLabelsThreadFunction, this); });
-    ////m_spatialMapper = make_unique<SpatialMapper>();
 
     m_videoFrameProcessorOperation = InitializeVideoFrameProcessorAsync();
 }
@@ -108,35 +97,7 @@ void AppMain::Update()
     const XMVECTOR eyeGazeDirection = m_mixedReality.GetEyeGazeDirection();
     const XMVECTOR eyeGazeOrigin = m_mixedReality.GetEyeGazeOrigin();
 
-    // Update the heading of the spatial mapper
-    if (m_spatialMapper)
-    {
-        m_spatialMapper->UpdateHeadPosition(headPosition);
-    }
-
     m_menu.Update(frameDelta, m_hands);
-
-    XMMATRIX posterTransform;
-    if (m_posterAnchor == 0)
-    {
-        // Creates an anchor to place the "poster" at a fixed 2 meters to the left of the initial head position
-        posterTransform = XMMatrixMultiply(
-            XMMatrixLookToRH(XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f), XMVectorSet(1.0f, 0.0f, 0.0f, 1.0f), XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f)),
-            XMMatrixTranslationFromVector(-headRight * 2.0f - headForward));
-        m_posterAnchor = m_mixedReality.CreateAnchor(posterTransform);
-    }
-    else
-    {
-        posterTransform = m_mixedReality.GetAnchorWorldTransform(m_posterAnchor);
-    }
-
-    XMVECTOR translation, rotation, scale;
-    if (XMMatrixDecompose(&scale, &rotation, &translation, posterTransform))
-    {
-        m_poster.SetPosition(translation);
-        m_poster.SetRotation(rotation);
-        m_poster.Update(frameDelta, m_hands);
-    }
 
     if (m_recording)
     {		
@@ -222,6 +183,8 @@ void AppMain::Update()
                 auto const& objectLabelText = objectLabel->GetButton(0);
 
                 objectLabelText->SetText(labelText);
+
+                XMVECTOR translation, rotation, scale;
                 if (XMMatrixDecompose(&scale, &rotation, &translation, labelPose))
                 {
                     objectLabel->SetPosition(translation);
@@ -255,10 +218,6 @@ winrt::Windows::Foundation::IAsyncAction AppMain::StartRecordingAsync()
     {
         co_await m_videoFrameProcessor->StartRecordingAsync(m_mixedReality.GetWorldCoordinateSystem());
     }
-    if (m_spatialMapper)
-    {
-        co_await m_spatialMapper->StartRecordingAsync(m_mixedReality.GetWorldCoordinateSystem());
-    }
     if (m_headPoseServer)
     {
         co_await m_headPoseServer->StartListeningAsync(30004);
@@ -280,10 +239,6 @@ winrt::Windows::Foundation::IAsyncAction AppMain::StopRecordingAsync()
     if (m_videoFrameProcessor)
     {
         co_await m_videoFrameProcessor->StopRecordingAsync();
-    }
-    if (m_spatialMapper)
-    {
-        m_spatialMapper->StopRecording();
     }
     if (m_scenario)
     {
@@ -357,10 +312,7 @@ void AppMain::OnButtonPressed(FloatingSlateButton* pButton)
 
 void AppMain::DrawObjects()
 {
-    //// Need to also uncomment the 2 lines in the constructor for this to work 
-    ////m_mixedReality.GetSurfaceMappingInterface()->DrawMeshes();
     m_menu.Draw();
-    ////m_poster.Draw();
     m_debugText.Render();
 
     for (const auto& label : m_objectLabels)

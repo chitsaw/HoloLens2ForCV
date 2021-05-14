@@ -21,7 +21,7 @@
 #include <winrt/Windows.Perception.Spatial.h>
 #include <winrt/Windows.Perception.Spatial.Preview.h>
 #include "SensorStreamServer.h"
-#include "TimeConverter.h"
+#include "..\Utils\TimeConverter.h"
 #include <shared_mutex>
 #include <thread>
 #include <ppltasks.h>
