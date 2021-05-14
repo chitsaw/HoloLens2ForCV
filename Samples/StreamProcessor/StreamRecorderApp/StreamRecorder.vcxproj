@@ -103,6 +103,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NODRAWTEXT;_ENABLE_EXTENDED_ALIGNED_STORAGE;_UNICODE;UNICODE;%(PreprocessorDefinitions);ENABLE_QRCODE_API</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Cannon;$(ProjectDir)..\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
@@ -114,6 +115,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>_XM_NO_INTRINSICS_;WIN32_LEAN_AND_MEAN;NOMINMAX;NODRAWTEXT;_ENABLE_EXTENDED_ALIGNED_STORAGE;_UNICODE;UNICODE;%(PreprocessorDefinitions);ENABLE_QRCODE_API</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Cannon;$(ProjectDir)..\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
@@ -125,6 +127,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NODRAWTEXT;_XM_NO_INTRINSICS_;_ENABLE_EXTENDED_ALIGNED_STORAGE;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Cannon;$(ProjectDir)..\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
@@ -136,6 +139,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NODRAWTEXT;_XM_NO_INTRINSICS_;_ENABLE_EXTENDED_ALIGNED_STORAGE;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Cannon;$(ProjectDir)..\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
@@ -147,6 +151,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NODRAWTEXT;_ENABLE_EXTENDED_ALIGNED_STORAGE;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Cannon;$(ProjectDir)..\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
@@ -158,6 +163,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NODRAWTEXT;_ENABLE_EXTENDED_ALIGNED_STORAGE;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Cannon;$(ProjectDir)..\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
@@ -166,9 +172,9 @@
   <ItemGroup>
     <ClInclude Include="AppMain.h" />
     <ClInclude Include="HeTHaTEyeStream.h" />
-    <ClInclude Include="StringHelpers.h" />
-    <ClInclude Include="Tar.h" />
-    <ClInclude Include="TimeConverter.h" />
+    <ClInclude Include="..\Utils\StringHelpers.h" />
+    <ClInclude Include="..\Utils\Tar.h" />
+    <ClInclude Include="..\Utils\TimeConverter.h" />
     <ClInclude Include="VideoFrameProcessor.h" />
     <ClInclude Include="RMCameraReader.h" />
     <ClInclude Include="SensorScenario.h" />
@@ -199,9 +205,9 @@
     <ClCompile Include="AppMain.cpp" />
     <ClCompile Include="AppView.cpp" />
     <ClCompile Include="HeTHaTEyeStream.cpp" />
-    <ClCompile Include="StringHelpers.cpp" />
-    <ClCompile Include="Tar.cpp" />
-    <ClCompile Include="TimeConverter.cpp" />
+    <ClCompile Include="..\Utils\StringHelpers.cpp" />
+    <ClCompile Include="..\Utils\Tar.cpp" />
+    <ClCompile Include="..\Utils\TimeConverter.cpp" />
     <ClCompile Include="VideoFrameProcessor.cpp" />
     <ClCompile Include="RMCameraReader.cpp" />
     <ClCompile Include="SensorScenario.cpp" />

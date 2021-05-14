@@ -39,13 +39,13 @@
     <ClCompile Include="RMCameraReader.cpp" />
     <ClCompile Include="SensorScenario.cpp" />
     <ClCompile Include="VideoFrameProcessor.cpp" />
-    <ClCompile Include="Tar.cpp">
+    <ClCompile Include="..\Utils\Tar.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="StringHelpers.cpp">
+    <ClCompile Include="..\Utils\StringHelpers.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="TimeConverter.cpp">
+    <ClCompile Include="..\Utils\TimeConverter.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="..\Cannon\TrackedHands.cpp">
@@ -61,13 +61,13 @@
     <ClInclude Include="RMCameraReader.h" />
     <ClInclude Include="SensorScenario.h" />
     <ClInclude Include="VideoFrameProcessor.h" />
-    <ClInclude Include="Tar.h">
+    <ClInclude Include="..\Utils\Tar.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="StringHelpers.h">
+    <ClInclude Include="..\Utils\StringHelpers.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="TimeConverter.h">
+    <ClInclude Include="..\Utils\TimeConverter.h">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="HeTHaTEyeStream.h" />
