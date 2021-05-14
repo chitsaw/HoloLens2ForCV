@@ -184,7 +184,6 @@
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Image Include="Media\Textures\coord_axes.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Cannon\AnimatedVector.cpp" />
@@ -302,11 +301,6 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="Media\Meshes\coord_axes.obj">
-      <FileType>Document</FileType>
-    </Media>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
